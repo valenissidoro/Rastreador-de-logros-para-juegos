@@ -1,6 +1,7 @@
 from enum import StrEnum
 from pydantic import BaseModel
 
+
 class Tags(StrEnum):
     Story = "STORY"
     Missable = "MISSABLE"
@@ -14,12 +15,13 @@ class Tags(StrEnum):
     Stackable = "STACKABLE"
     TwoController = "TWO CONTROLLER"
     DifficultySpecific = "DIFFICULTY SPECIFIC"
+    PostGame = "POST GAME"
 
 
 class Achv(BaseModel):
-    id : int
-    title : str
-    tag : list[Tags] = []
-    description : str
-    guide : str
-    unlocked : bool = False
+    id: int
+    title: str
+    tag: list[Tags] = []
+    description: str
+    guide: str
+    unlocked: bool = False
